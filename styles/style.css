@@ -1,0 +1,246 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+@font-face {
+    font-family: 'etnaetna';
+    src: url('/fonts/primary font/etna-free-font-webfont.woff') format('woff'),
+         url('/fonts/primary font/etna-free-font-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+    font-family: etnaetna,serif;
+}
+/* .clearfix {
+    overflow: auto;
+  } */
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*start header*/
+
+.header{
+    width: 100%;
+    height: 90px;
+    background-color: #333333;
+    
+    /* border: 2px solid red; */
+    
+}
+
+[class*="hcol-"] {
+    float: left;
+    padding: 7px;
+    width: 100%;
+  }
+
+/*logo start*/
+.logo-box{
+      float: left;
+      /* border: 2px solid red; */
+      display: flex;
+      align-content: center;
+      align-items: center;
+       margin-left: 25px;
+       
+       
+       
+  }
+.logo-box .logoo img{
+    width: 60px;
+    display: inline-block;
+    margin-top: 4px;
+}
+    
+.logo-box .logo img{
+    width: 260px;
+    display: inline-block;
+    margin-left: 15px;
+    
+
+       
+}
+/*logo end*/
+
+/*ul start*/
+.navmenu{
+    /* border: 2px solid red; */
+    margin-top: 7px;
+    text-align: center;
+}
+.navmenu ul{
+    
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      
+}
+.navmenu ul li{
+    display: inline-block;
+    margin:7px 5px;
+    letter-spacing: 5px;
+}
+.navmenu ul li a{
+    text-decoration: none;
+    color: #F4F4F4;
+    font-size: 30px;
+}
+.navmenu ul li a span{
+    color: #FFCC66;
+}
+
+
+
+/*ul end*/
+
+/*hamb menu icon start*/
+
+.menu-icon{
+    /* border: 2px solid red; */
+  
+  height: 72px;
+  padding: 26px 36px;
+
+
+}
+.mbar {
+    
+
+    background-color:#F4F4F4 ;
+    border-radius: 20px;
+    transition: all 1s;
+    height: 5px;
+
+}
+
+.mbar2 {
+    width: 70px;
+    rotate: 0deg;
+    transform: translate(0px,0px);
+}
+
+.mbar1 {
+    width: 50px;
+    transform: translate(10px,-8px);
+}
+
+.mbar3 {
+    width: 50px;
+    transform: translate(10px,8px);
+}
+
+/*click event on hamb*/
+#btn-control{
+    display: none;
+}
+.btn{
+    cursor: pointer;
+}
+#btn-control:checked+label .mbar2 {
+    transform: translate(-10px,0) rotate(-225deg);
+}
+
+#btn-control:checked+label .mbar1 {
+    transform: translate(0, -18px);
+}
+
+#btn-control:checked+label .mbar3 {
+    transform: translate(0, 18px);
+}
+
+
+
+
+/*hamb menu icon end*/
+
+
+
+
+
+
+
+
+/*end header*/
+
+
+
+/*for mobile*/
+
+.logo-box .logoo img{
+    width: 60px;
+    display: inline-block;
+    margin-top: 4px;
+}
+.logo-box .logo img{
+    width: 88px;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+    .menu-box{float: right;}
+    .menu-box label{float: right;}
+    .spacing{display: none;}
+    .navmenu{display: none;}
+    .hcol-s-1 {width: 8.33%;}
+    .hcol-s-2 {width: 16.66%;}
+    .hcol-s-3 {width: 25%;}
+    .hcol-s-4 {width: 33.33%;}
+    .hcol-s-5 {width: 41.66%;}
+    .hcol-s-6 {width: 50%;}
+    .hcol-s-7 {width: 58.33%;}
+    .hcol-s-8 {width: 66.66%;}
+    .hcol-s-9 {width: 75%;}
+    .hcol-s-10 {width: 83.33%;}
+    .hcol-s-11 {width: 91.66%;}
+    .hcol-s-12 {width: 100%;}
+
+/*for tab*/
+@media only screen and (min-width: 600px) {
+    .logo-box .logo img{
+        width: 280px;
+        display: inline-block;
+        margin-left: 15px;
+    }
+    .menu-box{float: right;}
+    .menu-box label{float: right;}
+    .spacing{display: none;}
+    .navmenu{display: none;}
+    .hcol-s-1 {width: 8.33%;}
+    .hcol-s-2 {width: 16.66%;}
+    .hcol-s-3 {width: 25%;}
+    .hcol-s-4 {width: 33.33%;}
+    .hcol-s-5 {width: 41.66%;}
+    .hcol-s-6 {width: 50%;}
+    .hcol-s-7 {width: 58.33%;}
+    .hcol-s-8 {width: 66.66%;}
+    .hcol-s-9 {width: 75%;}
+    .hcol-s-10 {width: 83.33%;}
+    .hcol-s-11 {width: 91.66%;}
+    .hcol-s-12 {width: 100%;}
+}
+/*for desktop*/
+@media only screen and (min-width: 1600px) {
+    
+    .navmenu{display: block;}
+    .hcol-1 {width: 8.33%;}
+    .hcol-2 {width: 16.66%;}
+    .hcol-3 {width: 25%;}
+    .hcol-4 {width: 33.33%;}
+    .hcol-5 {width: 41.66%;}
+    .hcol-6 {width: 50%;}
+    .hcol-7 {width: 58.33%;}
+    .hcol-8 {width: 66.66%;}
+    .hcol-9 {width: 75%;}
+    .hcol-10 {width: 83.33%;}
+    .hcol-11 {width: 91.66%;}
+    .hcol-12 {width: 100%;}
+  }
+
