@@ -13,6 +13,10 @@
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: etnaetna, serif;
 }
@@ -30,9 +34,13 @@ body {
 /*start header*/
 
 .header {
+    z-index: 1;
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 90px;
     background-color: #333333;
+    
 
     /* border: 2px solid red; */
 
@@ -52,6 +60,7 @@ body {
     align-content: center;
     align-items: center;
     margin-left: 25px;
+    
 
 
 
@@ -131,6 +140,7 @@ body {
 /*hamb menu icon start*/
 
 .menu-icon {
+    
     /* border: 2px solid red; */
 
     height: 72px;
@@ -229,8 +239,10 @@ body {
     margin-bottom:0px;
     
 }
+
 .banner-text span{
     color: #FFCC66;
+    transition: all 1s;
 }
 .banner-area p {
     
@@ -243,9 +255,13 @@ body {
     background-color: transparent;
     transition: background-color .3s;
 }
+.banner-area p::selection{
+    background-color: #FFCC66;
+}
 .banner-area p span{
     color:#FFCC66;
     font-size: 30px;
+    transition: all 1s;
 }
 
 .scrollicon{
@@ -277,11 +293,92 @@ body {
 .banner-area p:hover{
     background-color: rgbA(51, 51, 51, 30%) ;
 }
+.banner-area p:hover span{
+    background-color:#FFCC66 ;
+    padding:2px 5px 2px 5px ;
+    color: #333333;
+    border-radius: 5px;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    
+    
+}
 
 
 
 
-/*start cover photo area*/
+/*end cover photo area*/
+
+/*start gallery section */
+
+/*for main photo banner*/
+.gallery-row-main{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #333333;
+    padding: 0 16px;
+    
+    justify-content: center;
+}
+
+
+.gallery-column-main img{
+    vertical-align: center;
+    margin-top: 16px;
+    width: 100%;
+    
+
+    
+    
+}
+
+.gallery-row{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #333333;
+    padding: 0 8px;
+    
+    justify-content: center;
+}
+
+
+.gallery-column img{
+    vertical-align: center;
+    margin-top: 16px;
+    width: 100%;
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*end gallery section */
 
 
 
@@ -323,18 +420,40 @@ body {
 
 /*start responsive*/
 /*for mobile*/
+.gallery-column-main{
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 8px;
+}
+.gallery-column{
+    flex: 100%;
+    width: 100%;
+}
+
+.banner-area p:hover span{
+    display: inline;
+    margin: 0;
+    background-color: initial;
+    color: #FFCC66;
+}
 .banner-area p span{
     font-size: 36px;
+    
+}
+.banner-area p span::selection{
+    
+    background-color: #333333;
 }
 .banner-text{
     font-size: 42px;
+    padding: 48% 0 0 0;
 }
 .banner-area p{
     padding: 5px 16%;
     font-size: 10px;
 }
 .banner-area{
-    height:89vh;
+    height:100vh;
     background-position:center;
 }
 
@@ -414,8 +533,11 @@ body {
     width: 100%;
 }
 
+
+
 /*for tab*/
 @media only screen and (min-width: 600px) {
+    
     .banner-area p span{
         font-size: 30px;
     }
@@ -427,7 +549,7 @@ body {
         font-size: 18px;
     }
     .banner-area{
-        height:90vh;
+        height:100vh;
     background-position:center;
     }
     .logo-box .logo img {
@@ -502,8 +624,35 @@ body {
 }
 
 @media only screen and (min-width: 1300px) {
+
+    .gallery-column-main{
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+
+    .gallery-column{
+        flex: 33.33%;
+        max-width: 33.33%;
+        padding: 0 8px;
+    }
+
+
+    .banner-area p:hover span{
+        /* background-color:#FFCC66 ; */
+        padding:2px 5px 2px 5px ;
+        /* color: #333333; */
+        border-radius: 5px;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        
+        
+        
+    }
     .banner-area{
-        height:90vh;
+        height:100vh;
     background-position:center;
     }
     .logo-box .logo img {
@@ -511,7 +660,9 @@ body {
         display: inline-block;
         margin-left: 15px;
     }
-
+.banner-text{
+    padding: 18% 0 0 0;
+}
     .menu-box {
         float: right;
     }
@@ -579,6 +730,7 @@ body {
 
 /*for desktop*/
 @media only screen and (min-width: 1600px) {
+  
 
     .navmenu {
         display: block;
