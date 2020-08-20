@@ -210,11 +210,12 @@ body {
     position: fixed;
     top: 90px;
     right:0px;
-    transition: visibility 0s, opacity 1s;
+    transition: visibility 0s, opacity .5s;
     border-radius: 8px;
     text-align: center;
     visibility: hidden;
     opacity: 0;
+    width: 100%;
 
 
 }
