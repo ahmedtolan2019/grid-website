@@ -40,7 +40,7 @@ body {
     width: 100%;
     height: 90px;
     background-color: #333333;
-    
+
 
     /* border: 2px solid red; */
 
@@ -60,7 +60,7 @@ body {
     align-content: center;
     align-items: center;
     margin-left: 25px;
-    
+
 
 
 
@@ -70,12 +70,12 @@ body {
     width: 60px;
     display: inline-block;
     margin-top: 4px;
-    
+
     animation-name: logorotation;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
-  
+
 }
 
 .logo-box .logo img {
@@ -140,7 +140,7 @@ body {
 /*hamb menu icon start*/
 
 .menu-icon {
-    
+
     /* border: 2px solid red; */
 
     height: 72px;
@@ -200,6 +200,60 @@ body {
     transform: translate(0, 18.5px);
 }
 
+.side-menu-row{
+    /* border: 1px solid red; */
+    /* display: none; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 8px;
+    background-color: #FFCC66;
+    position: fixed;
+    top: 90px;
+    right:0px;
+    transition: visibility 0s, opacity 1s;
+    border-radius: 8px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+
+
+}
+.side-menu-column{
+    flex: 100%;
+    max-width: 100%;
+    padding: 0 8px;
+    
+
+}
+.side-menu-column a{
+    display: block;
+    text-decoration: none;
+    font-size: 60px;
+    margin-top: 16px;
+    color: #FFCC66;
+    padding: 0 8px;
+    border-radius: 4px;
+    transition: background-color .5s;
+    background-color:#333333
+
+
+
+}
+.side-menu-column a:nth-child(4){
+    margin-bottom: 16px;
+    font-size: 59px;
+}
+.side-menu-column a:hover{
+    background-color:#F4F4F4;
+    color: #333333;
+}
+
+#btn-control:checked+label .side-menu-row {
+    /* display: flex; */
+    visibility: visible;
+    opacity: 1;
+}
+
 
 
 
@@ -217,27 +271,27 @@ body {
 
 /*start cover photo area*/
 .banner-area{
-    
+
     width: 100%;
    height: 100vh;
    /* border: 5px solid red; */
     background-image: url(../imgs/pictures/ztoon\ pic.png);
     background-repeat: no-repeat;
     background-size: center center;
-    
-    
+
+
 }
 .banner-text{
-    
+
     color: #F4F4F4;
-    
+
     text-align: center;
     font-size: 60px;
     letter-spacing: 10px;
     /* border: 5px solid red; */
     padding: 18% 0px 0px 0px;
     margin-bottom:0px;
-    
+
 }
 
 .banner-text span{
@@ -245,7 +299,7 @@ body {
     transition: all 1s;
 }
 .banner-area p {
-    
+
     padding: 5px 30%;
     color: #F4F4F4;
     letter-spacing: 2px;
@@ -273,8 +327,8 @@ body {
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  
-    
+
+
 }
 .scrollicon a .scrolliconcta{
     /* border: 5px solid red; */
@@ -282,15 +336,15 @@ body {
     background-repeat: no-repeat;
     background-size: center center;
     height: 70px;
-    
-    
+
+
 
 }
 
 
 .scrolliconcta:hover{
     transform: translate(0,10px);
-    
+
 }
 .banner-area p:hover{
     background-color: rgbA(51, 51, 51, 30%) ;
@@ -303,9 +357,9 @@ body {
     display: block;
     margin-top: 10px;
     margin-bottom: 10px;
-    
-    
-    
+
+
+
 }
 
 
@@ -321,7 +375,7 @@ body {
     flex-wrap: wrap;
     background-color: #333333;
     padding: 0 16px;
-    
+
     justify-content: center;
 }
 
@@ -330,10 +384,10 @@ body {
     vertical-align: center;
     margin-top: 16px;
     width: 100%;
-    
 
-    
-    
+
+
+
 }
 
 .gallery-row{
@@ -341,7 +395,7 @@ body {
     flex-wrap: wrap;
     background-color: #333333;
     padding: 0 8px;
-    
+
     justify-content: center;
 }
 
@@ -351,8 +405,8 @@ body {
     margin-top: 16px;
     width: 100%;
 
-    
-    
+
+
 }
 
 
@@ -440,10 +494,10 @@ body {
 }
 .banner-area p span{
     font-size: 36px;
-    
+
 }
 .banner-area p span::selection{
-    
+
     background-color: #333333;
 }
 .banner-text{
@@ -542,7 +596,7 @@ body {
 
 /*for tab*/
 @media only screen and (min-width: 600px) {
-    
+
     .banner-area p span{
         font-size: 30px;
     }
@@ -652,9 +706,9 @@ body {
         display: block;
         margin-top: 10px;
         margin-bottom: 10px;
-        
-        
-        
+
+
+
     }
     .banner-area{
         height:100vh;
@@ -735,7 +789,7 @@ body {
 
 /*for desktop*/
 @media only screen and (min-width: 1600px) {
-  
+
 
     .navmenu {
         display: block;
