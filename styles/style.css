@@ -286,6 +286,7 @@ section{
     flex: 100%;
     max-width: 100%;
     width: 100%;
+    /* border: 1px solid green; */
     
 }
 
@@ -407,7 +408,7 @@ section{
 .videos-row-main{
 display: flex;
 justify-content: center;
-align-items: center;
+/* align-items: center; */
 /* border: 5px solid red; */
 
 
@@ -465,6 +466,8 @@ height: 50%;
         
         }
 
+
+
         /*sub videos*/
 
         .videos-row{
@@ -499,15 +502,15 @@ height: 50%;
 /*for main photo banner*/
 .gallery-row-main{
     display: flex;
-    flex-wrap: wrap;
+    
     /* background-color: #333333; */
-    padding: 0 16px;
-
+    /* padding: 0 16px; */
+align-items: center;
     justify-content: center;
 }
 
 
-.gallery-column-main img{
+/* .gallery-column-main img{
     vertical-align: center;
     margin-top: 16px;
     width: 100%;
@@ -515,20 +518,50 @@ height: 50%;
 
 
 
-}
+} */
+
+.gallery-column-main::before{
+    content: " ";
+     
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     top: 0px;
+     z-index:5;
+     background:linear-gradient(180deg,rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.2) 100%),linear-gradient(180deg,rgba(0,0,0,0.2) 0%,transparent 100%);
+    
+    }
+    .gallery-column-main::before{
+        content: "LATEST ASTROPHOTOGRAPHY PANORAMA";
+         font-size: 9vw;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         
+         color: #F4F4F4;
+        padding: 6vh 0% 3% 0%;
+        line-height: 1em;
+         position: absolute;
+         top: 0px;
+         z-index:5;
+         background:linear-gradient(180deg,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%),linear-gradient(180deg,rgba(0,0,0,0.2) 0%,transparent 100%);
+        
+        }
 
 .gallery-row{
     display: flex;
     flex-wrap: wrap;
-    background-color: #333333;
+    /* background-color: #333333; */
     padding: 0 8px;
-
+    /* align-items: center; */
     justify-content: center;
+    margin-top: 90px;
+    
 }
 
 
 .gallery-column img{
-    vertical-align: center;
+    
     margin-top: 16px;
     width: 100%;
 
@@ -562,6 +595,52 @@ height: 50%;
 
 
 /*end gallery section */
+
+/*start contact section*/
+
+.contact-row{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.contact-column{
+    
+    flex: 100%;
+    
+    max-width: 100%;
+    max-height: 600px;
+    
+    overflow: hidden;
+    position: relative;
+top: 90px;
+right: 0;
+bottom: 0;
+left: 0;
+
+
+
+    
+}
+
+.contact-box{
+    background-color: #333333;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color:#F4F4F4;
+    
+    
+    
+    
+}
+.contact-box span{
+    color:#FFCC66;
+}
+/*end contact section*/
 
 
 
@@ -617,7 +696,7 @@ right: 0;
 bottom: 0;
 left: 0;
 
-height: 50%;
+
 z-index: 1;
     
 }
@@ -629,14 +708,42 @@ z-index: 1;
 
     
 }
+.gallery-column-main video{
+    
+    transform: translate(0px,-107px);
+    width: 1000px;
+
+
+    
+}
+
+
+.gallery-column-main img{
+    height: 100%;
+}
 .gallery-column-main{
+    /* border: 1px solid red; */
     flex: 100%;
+    height: 50%;
+    z-index: 1;
     max-width: 100%;
-    padding: 0 8px;
+    max-height: 450px;
+    min-height: 50px;
+    overflow: hidden;
+    position: relative;
+top: 89px;
+right: 0;
+bottom: 0;
+left: 0;
+/* object-position: center;
+height: 50%; */
+margin-top: 0px;
 }
 .gallery-column{
     flex: 100%;
     width: 100%;
+    padding: 0px 8px;
+    
 }
 
 .banner-area p:hover span{
@@ -860,8 +967,23 @@ z-index: 1;
 
 @media only screen and (min-width: 1300px) {
 
+    .gallery-column-main video{
+    
+        transform: translate(0px,-107px);
+        width: 100%;
+    
+    
+        
+    }
+
+    .gallery-column-main img{
+        transform: translate(0px, -1300px);
+        
+        
+    }
+
 .videos-row{
-    padding: 0px 300px;
+    padding: 0px 200px;
 }
 .videos-column{
     flex: 50%;
@@ -895,18 +1017,36 @@ z-index: 1;
         
     }
 
+    
+
     .gallery-column-main{
         flex: 100%;
         max-width: 100%;
-        padding: 0 16px;
+        /* padding: 0 16px; */
+        max-height: 600px;
+        
+        
     }
+    .gallery-column-main img{
+        width: 100%;
+    }
+    
 
 
     .gallery-column{
         flex: 33.33%;
         max-width: 33.33%;
         padding: 0 8px;
+        /* border: 1PX SOLID red; */
+        
     }
+
+    .gallery-row{
+        padding: 0px 200px;
+        /* border: 1PX SOLID red; */
+    }
+
+
 
 
     .banner-area p:hover span{
