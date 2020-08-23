@@ -75,7 +75,7 @@ body {
 
     animation-name: logorotation;
     animation-duration: 2s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 4;
     animation-direction: alternate-reverse;
 
 }
